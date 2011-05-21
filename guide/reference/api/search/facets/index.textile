@@ -105,7 +105,7 @@ facet = &lt;facet-name&gt; : { &lt;facet-type&gt; (,"global" : true) (,&lt;facet
 
 facet-name = string
 
-facet-type = (&lt;terms-facet&gt; |
+facet-type = ("&lt;terms-facet&gt;":/guide/reference/search/facets/terms.html |
               &lt;range-facet&gt; |
               &lt;histogram-facet&gt; |
               &lt;date-histogram-facet&gt; |
