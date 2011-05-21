@@ -101,7 +101,7 @@ h2. Formal Description
 <div class="prettyprint">
 facets = "facets" : { &lt;facet&gt; (,&lt;facet&gt;)* }
 
-facet = &lt;facet-name&gt; : { &lt;facet-type&gt; (,"global":true) (,&lt;facet-filter&gt;) }
+facet = &lt;facet-name&gt; : { &lt;facet-type&gt; (,"global" : true) (,&lt;facet-filter&gt;) }
 
 facet-name = string
 
@@ -115,6 +115,7 @@ facet-type = (&lt;terms-facet&gt; |
               &lt;terms-stats-facet&gt; |
               &lt;geo-distance-facet&gt;)
 
-facet-filter = "facet_filter" : { &lt;filter&gt; }</div>
+facet-filter = "facet_filter" : { &lt;filter&gt; }
+</div>
 
 TODO: find a way to add links to each facet type and to <filter>
