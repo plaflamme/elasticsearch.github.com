@@ -99,17 +99,15 @@ All facets can be configured with an additional filter (explained in the "Query 
 h2. Formal Description
 
 <pre class="prettyprint">
-facets = "facets" : { <facet-def> (,<facet-def>)* }
+facets = "facets" : { <facet> (,<facet>)* }
 
-facet-def = <facet-name> : { <facet-type> (,"global":true) (,<facet-filter>) }
+facet = <facet-name> : { <facet-type> (,"global":true) (,<facet-filter>) }
 
 facet-name = string
 
-facet-type = <facet-type-name> : { <facet-type-body> }
+facet-type = (<terms-facet>|<range-facet>|<histogram-facet>|<date-histogram-facet>|<filter-facet>|<query-facet>|<statistical-facet>|<terms-stats-facet>|<geo-distance-facet>)
 
-facet-type-name = string
-
-facet-type-body = [see facet-types]
-
-facet-filter = "facet_filter" : { <a href="/guide/reference/api/search/filter.html"><filter-def></a> }
+facet-filter = "facet_filter" : { <filter> }
 <pre>
+
+TODO: add links to each facet type and to <filter>
