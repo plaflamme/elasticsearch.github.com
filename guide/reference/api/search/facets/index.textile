@@ -111,5 +111,5 @@ facet-type-name = string
 
 facet-type-body = [see facet-types]
 
-facet-filter = "facet_filter" : { "_<filter-def>_":/guide/reference/api/search/filter.html }
+facet-filter = "facet_filter" : { </pre>"_<filter-def>_":/guide/reference/api/search/filter.html<pre> }
 <pre>
