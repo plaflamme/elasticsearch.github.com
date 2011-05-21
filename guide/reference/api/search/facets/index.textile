@@ -98,6 +98,7 @@ All facets can be configured with an additional filter (explained in the "Query 
 
 h2. Formal Description
 
+==
 <div style="white-space:pre;">
 facets = "facets" : { &lt;facet&gt; (,&lt;facet&gt;)* }
 
@@ -117,3 +118,4 @@ facet-type = ("&lt;terms-facet&gt;":/guide/reference/search/facets/terms-facet.h
 
 facet-filter = "facet_filter" : { "&lt;filter&gt;":/guide/reference/search/filter.html }
 </div>
+==
