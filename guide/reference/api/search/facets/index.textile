@@ -98,24 +98,23 @@ All facets can be configured with an additional filter (explained in the "Query 
 
 h2. Formal Description
 
-<pre class="prettyprint">
-facets = "facets" : { <facet> (,<facet>)* }
+<div class="prettyprint">
+facets = "facets" : { &lt;facet&gt; (,&lt;facet&gt;)* }
 
-facet = <facet-name> : { <facet-type> (,"global":true) (,<facet-filter>) }
+facet = &lt;facet-name&gt; : { &lt;facet-type&gt; (,"global":true) (,&lt;facet-filter&gt;) }
 
 facet-name = string
 
-facet-type = (<terms-facet> |
-              <range-facet> |
-              <histogram-facet> |
-              <date-histogram-facet> |
-              <filter-facet> |
-              <query-facet> |
-              <statistical-facet> |
-              <terms-stats-facet> |
-              <geo-distance-facet>)
+facet-type = (&lt;terms-facet&gt; |
+              &lt;range-facet&gt; |
+              &lt;histogram-facet&gt; |
+              &lt;date-histogram-facet&gt; |
+              &lt;filter-facet&gt; |
+              &lt;query-facet&gt; |
+              &lt;statistical-facet&gt; |
+              &lt;terms-stats-facet&gt; |
+              &lt;geo-distance-facet&gt;)
 
-facet-filter = "facet_filter" : { <filter> }
-</pre>
+facet-filter = "facet_filter" : { &lt;filter&gt; }</div>
 
 TODO: find a way to add links to each facet type and to <filter>
