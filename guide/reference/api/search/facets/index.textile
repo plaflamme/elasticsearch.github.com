@@ -95,3 +95,21 @@ All facets can be configured with an additional filter (explained in the "Query 
     }
 }    
 </pre>
+
+h2. Formal Description
+
+<pre class="prettyprint">
+facets = "facets" : { <facet-def> (,<facet-def>)* }
+
+facet-def = <facet-name> : { <facet-type> (,"global":true) (,<facet-filter>) }
+
+facet-name = string
+
+facet-type = <facet-type-name> : { <facet-type-body> }
+
+facet-type-name = string
+
+facet-type-body = [see facet-types]
+
+facet-filter = "facet_filter" : { "<filter-def>":/guide/reference/api/search/filter }
+<pre>
