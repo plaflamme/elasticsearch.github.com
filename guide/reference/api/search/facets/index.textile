@@ -116,6 +116,6 @@ facet-type = (<terms-facet> |
               <geo-distance-facet>)
 
 facet-filter = "facet_filter" : { <filter> }
-<pre>
+</pre>
 
-TODO: add links to each facet type and to <filter>
+TODO: find a way to add links to each facet type and to <filter>
