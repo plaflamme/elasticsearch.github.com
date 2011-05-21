@@ -98,7 +98,7 @@ All facets can be configured with an additional filter (explained in the "Query 
 
 h2. Formal Description
 
-p{white-space:pre}.facets = "facets" : { &lt;facet&gt; (,&lt;facet&gt;)* }
+p{white-space:pre}. facets = "facets" : { &lt;facet&gt; (,&lt;facet&gt;)* }
 facet = &lt;facet-name&gt; : { &lt;facet-type&gt; (,"global" : true) (,&lt;facet-filter&gt;) }
 facet-name = string
 facet-type = ("&lt;terms-facet&gt;":/guide/reference/search/facets/terms-facet.html |
