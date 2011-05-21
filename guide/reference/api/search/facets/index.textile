@@ -97,7 +97,8 @@ All facets can be configured with an additional filter (explained in the "Query 
 </pre>
 
 h2. Formal Description
-==<div style="white-space:pre;">==
+
+<div style="white-space:pre;">
 facets = "facets" : { &lt;facet&gt; (,&lt;facet&gt;)* }
 
 facet = &lt;facet-name&gt; : { &lt;facet-type&gt; (,"global" : true) (,&lt;facet-filter&gt;) }
@@ -115,4 +116,4 @@ facet-type = ("&lt;terms-facet&gt;":/guide/reference/search/facets/terms-facet.h
               "&lt;geo-distance-facet&gt;":/guide/reference/search/facets/geo-distance-facet.html)
 
 facet-filter = "facet_filter" : { "&lt;filter&gt;":/guide/reference/search/filter.html }
-==</div>==
+</div>
