@@ -98,7 +98,7 @@ All facets can be configured with an additional filter (explained in the "Query 
 
 h2. Formal Description
 
-<div class="prettyprint">
+<pre class="prettyprint">
 facets = "facets" : { <facet-def> (,<facet-def>)* }
 
 facet-def = <facet-name> : { <facet-type> (,"global":true) (,<facet-filter>) }
@@ -111,5 +111,5 @@ facet-type-name = string
 
 facet-type-body = [see facet-types]
 
-facet-filter = "facet_filter" : { <a href="/guide/reference/api/search/filter.html">"_<filter-def>_"</a> }
-<div>
+facet-filter = "facet_filter" : { <a href="/guide/reference/api/search/filter.html"><filter-def></a> }
+<pre>
