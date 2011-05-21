@@ -105,7 +105,15 @@ facet = <facet-name> : { <facet-type> (,"global":true) (,<facet-filter>) }
 
 facet-name = string
 
-facet-type = (<terms-facet>|<range-facet>|<histogram-facet>|<date-histogram-facet>|<filter-facet>|<query-facet>|<statistical-facet>|<terms-stats-facet>|<geo-distance-facet>)
+facet-type = (<terms-facet> |
+              <range-facet> |
+              <histogram-facet> |
+              <date-histogram-facet> |
+              <filter-facet> |
+              <query-facet> |
+              <statistical-facet> |
+              <terms-stats-facet> |
+              <geo-distance-facet>)
 
 facet-filter = "facet_filter" : { <filter> }
 <pre>
