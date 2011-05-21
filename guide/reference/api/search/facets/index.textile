@@ -115,7 +115,5 @@ facet-type = ("&lt;terms-facet&gt;":/guide/reference/search/facets/terms-facet.h
               "&lt;terms-stats-facet&gt;":/guide/reference/search/facets/terms-facet.html |
               "&lt;geo-distance-facet&gt;":/guide/reference/search/facets/geo-distance-facet.html)
 
-facet-filter = "facet_filter" : { &lt;filter&gt; }
+facet-filter = "facet_filter" : { "&lt;filter&gt;":/guide/reference/search/filter.html }
 </div>
-
-TODO: find a way to add links to each facet type and to <filter>
