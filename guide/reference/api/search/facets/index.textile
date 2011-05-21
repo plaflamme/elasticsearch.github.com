@@ -65,7 +65,7 @@ Facets are bound to the current query by default, called @main@. Every facet can
 A shorthand to set a facet to run globally is to set the @global@ parameter to @true@:
 
 <pre class="prettyprint lang-js">
-{
+{>
     "facets" : {
         "<FACET NAME>" : {
             "<FACET TYPE>" : { ... },
@@ -111,5 +111,5 @@ facet-type-name = string
 
 facet-type-body = [see facet-types]
 
-facet-filter = "facet_filter" : { "<filter-def>":/guide/reference/api/search/filter }
+facet-filter = "facet_filter" : { "_<filter-def>_":/guide/reference/api/search/filter.html }
 <pre>
