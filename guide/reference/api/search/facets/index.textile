@@ -102,7 +102,7 @@ h2. Formal Description
 |_. Description | Holds a list of _facet_ definition. Each facet definition node has a unique name that is returned in the query result. |
 
 |_. Child |_. Description |_. Type |_. Required (cardinality) |
-| @<facet-name>@ | A facet to define. It's body is described below. | Yes (1..n) |
+| @<facet-name>@ | A facet to define. It's body is described below. | @<facet-name>@ | Yes (1..n) |
 
 |_. Node | @<facet-name>@ |
 |_. Description | A _facet_ definition. |
