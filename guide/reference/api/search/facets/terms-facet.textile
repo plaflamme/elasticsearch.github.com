@@ -238,3 +238,5 @@ h1. Formal Description
 | @exclude@ | Excludes certain terms from the result. | _array_ of _string_ | No (0..1). Default will exclude nothing |
 | @regex@ | A regular expression used to test potential terms. Only matching terms are returned. | _string_ (regex, see "Java Pattern API":http://download.oracle.com/javase/6/docs/api/java/util/regex/Pattern.html) | No (0..1). All terms match by default |
 | @regex_flags@ | Flags to a @regex@ attribute | _string_ (see "Java Pattern API":http://download.oracle.com/javase/6/docs/api/java/util/regex/Pattern.html#field_summary) | No (0..1) |
+| @script@ | A script to determine whether a term should be included or not (returns a _boolean_). Alternatively the script can return the term's name (returns a _string_) | _string_ | No (0..1) |
+| @script_field@ | Extract @script@ from one of the document's field (specified by this value). | _string_ | No (0..1) |
