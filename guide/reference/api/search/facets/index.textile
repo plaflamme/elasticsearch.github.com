@@ -98,6 +98,15 @@ All facets can be configured with an additional filter (explained in the "Query 
 
 h2. Formal Description
 
+| Members | Description | Required |
+| global | Set to @true@ to run facet on all documents in the index | No. Default is @false@ |
+
+
+| Child | Description | Cardinality |
+| facet_filter | A "@filter@":/guide/reference/search/filter.html to apply to the faceted documents | 0..1 |
+| "terms":/guide/reference/search/facets/terms-facet.html | A "@terms@":/guide/reference/search/facets/terms-facet.html facet | 0..* |
+| range | 
+
 p{white-space:pre}. facets = "facets" : { &lt;facet&gt; (,&lt;facet&gt;)* }
 facet = &lt;facet-name&gt; : { &lt;facet-type&gt; (,"global" : true) (,&lt;facet-filter&gt;) }
 facet-name = string
