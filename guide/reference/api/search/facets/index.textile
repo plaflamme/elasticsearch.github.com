@@ -114,25 +114,68 @@ h2. Formal Description
 
 h2. Examples
 
+A @terms@ facet (named "Manufacturer") and a @range@ facet (named "Price") applied on the query result
+<pre class="prettyprint lang-js">
+"facets" : {
+  "Manufacturer" : {
+    "terms": {
+      "field" : "manufacturer"
+    }
+  },
+  "Price" : {
+    "range" : {
+      "field": "price",
+      "ranges" : [
+        { "to" : 50 },
+        { "from" : 50, "to" : 100 },
+        { "from" : 100, "to" : 150 },
+        { "from" : 150 }
+      ]
+    }
+  }
+}
+</pre>
+
+A facet applied on all documents instead of on the query result only:
 <pre class="prettyprint lang-js">
 {
-    "facets" : {
-      "Manufacturer" : {
-        "terms": {
-          "field" : "manufacturer"
-        }
+  "query" : {
+    "term": {
+      "manufacturer": "Acme"
+    }
+  },
+  "facets" : {
+    "Department" : {
+      "terms" : {
+        "field" : "department"
       },
-      "Price" : {
+      "global": true
+    }
+  }
+}
+</pre>
+
+A facet applied on documents that match the filter
+<pre class="prettyprint lang-js">
+{
+  "query" : {
+    "term": {
+      "manufacturer": "Acme"
+    }
+  },
+  "facets" : {
+    "Category" : {
+      "terms" : {
+        "field" : "category"
+      },
+      "facet_filter": {
         "range" : {
-          "field": "price",
-          "ranges" : [
-            { "to" : 50 },
-            { "from" : 50, "to" : 100 },
-            { "from" : 100, "to" : 150 },
-            { "from" : 150 }
-          ]
+          "price": {
+            "to" : 100
+          }
         }
       }
     }
+  }
 }
 </pre>
