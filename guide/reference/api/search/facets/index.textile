@@ -99,16 +99,27 @@ All facets can be configured with an additional filter (explained in the "Query 
 h2. Formal Description
 
 h3. @facets@
+
 |_. Child |_. Description |_. Cardinality |
 | @<facet-name>@ | A facet to define. It's body is described below. | 1..* |
 
 h3. @<facet-name>@
+
 |_. Member |_. Description |_. Required |
 | @global@ | Set to @true@ to run facet on all documents in the index | No. Default is @false@ |
 
 |_. Child |_. Description |_. Cardinality |
 | @facet_filter@ | A "@filter@":/guide/reference/search/filter.html to apply to the faceted documents | 0..1 |
-| @<facet-type>@ | The facet type to define. This is one of: "@terms@":/guide/reference/search/facets/terms-facet.html "@range@":/guide/reference/search/facets/range-facet.html "@histogram@":/guide/reference/search/facets/histogram-facet.html "@date-histogram@":/guide/reference/search/facets/date-histogram-facet.html "@filter@":/guide/reference/search/facets/filter-facet.html "@query@":/guide/reference/search/facets/query-facet.html "@statistical@":/guide/reference/search/facets/statistical-facet.html "@terms-stats@":/guide/reference/search/facets/terms-facet.html "@geo-distance-facet@":/guide/reference/search/facets/geo-distance-facet.html| 1 |
+| @<facet-type>@ | The facet type to define. This is one of: 
+"@terms@":/guide/reference/search/facets/terms-facet.html 
+"@range@":/guide/reference/search/facets/range-facet.html 
+"@histogram@":/guide/reference/search/facets/histogram-facet.html 
+"@date-histogram@":/guide/reference/search/facets/date-histogram-facet.html 
+"@filter@":/guide/reference/search/facets/filter-facet.html 
+"@query@":/guide/reference/search/facets/query-facet.html 
+"@statistical@":/guide/reference/search/facets/statistical-facet.html 
+"@terms-stats@":/guide/reference/search/facets/terms-facet.html 
+"@geo-distance-facet@":/guide/reference/search/facets/geo-distance-facet.html| 1 |
 
 
 p{white-space:pre}. facets = "facets" : { &lt;facet&gt; (,&lt;facet&gt;)* }
