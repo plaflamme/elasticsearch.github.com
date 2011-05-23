@@ -98,18 +98,14 @@ All facets can be configured with an additional filter (explained in the "Query 
 
 h2. Formal Description
 
-h3. _facets_ Node
-
 |_. Node | @facets@ |
 |_. Description | Holds a list of _facet_ definition. Each facet definition node has a unique name that is returned in the query result. |
 
 |_. Child |_. Description |_. Cardinality |
 | @<facet-name>@ | A facet to define. It's body is described below. | 1..* |
 
-h3. facet
-
 |_. Node | @<facet-name>@ |
-|_. Description | A _facet_ definition. The node name is given by the user. |
+|_. Description | A _facet_ definition. |
 
 |_. Member |_. Description |_. Required |
 | @global@ | Set to @true@ to run facet on all documents in the index | No. Default is @false@ |
