@@ -224,3 +224,17 @@ p. The term facet allows to specify a special field name called @_index@. This w
 h1. Memory Considerations
 
 p. Term facet causes the relevant field values to be loaded into memory. This means that per shard, there should be enough memory to contain them. It is advisable to explicitly set the fields to be @not_analyzed@ or make sure the number of unique tokens a field can have is not large.
+
+h1. Formal Description
+
+|_. Node | @terms@ |
+|_. Description | A facet on a field that holds a few terms |
+
+|_. Child |_. Description |_. Type |_. Required (cardinality) |
+| @field@ | The field to use to extract terms from | _string_ | Yes (1) |
+| @size@ | The maximum number of most frequent terms to return | _int_ | No (0..1). Default is XX. |
+| @order@ | Allow to control the ordering of the terms facets | _string_ one if @count@, @term@, @reverse_count@ @reverse_term@ | No (0..1). The default is @count@ |
+| @all_terms@ | Forces to return counts for all terms as opposed to only the ones with hits. | _boolean_ | No (0..1). Default is @false@ |
+| @exclude@ | Excludes certain terms from the result. | _array_ of _string_ | No (0..1). Default will exclude nothing |
+| @regex@ | A regular expression used to test potential terms. Only matching terms are returned. | _string_ (regex) | No (0..1). All terms match by default |
+| @regex_flags@ | Flags to a @regex@ attribute | _string_ (see "Java Pattern API":http://download.oracle.com/javase/6/docs/api/java/util/regex/Pattern.html#field_summary) | No (0..1). |
