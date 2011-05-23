@@ -111,3 +111,28 @@ h2. Formal Description
 | @<facet-type>@ (name varies) | The facet type to define | One of: "@terms@":/guide/reference/search/facets/terms-facet.html "@range@":/guide/reference/search/facets/range-facet.html "@histogram@":/guide/reference/search/facets/histogram-facet.html "@date-histogram@":/guide/reference/search/facets/date-histogram-facet.html "@filter@":/guide/reference/search/facets/filter-facet.html "@query@":/guide/reference/search/facets/query-facet.html "@statistical@":/guide/reference/search/facets/statistical-facet.html "@terms-stats@":/guide/reference/search/facets/terms-facet.html "@geo-distance-facet@":/guide/reference/search/facets/geo-distance-facet.html| Yes (1) |
 | @facet_filter@ | A "@filter@":/guide/reference/search/filter.html to apply to the faceted documents | Any "@filter@":/guide/reference/search/filter.html | No (0..1) |
 | @global@ | Set to @true@ to run facet on all documents in the index (as opposed to only the ones from the query result) | _boolean_ | No. Default is @false@  (0..1) |
+
+h2. Examples
+
+<pre class="prettyprint lang-js">
+{
+    "facets" : {
+      "Manufacturer" : {
+        "terms": {
+          "field" : "manufacturer"
+        }
+      },
+      "Price" : {
+        "range" : {
+          "field": "price",
+          "ranges" : [
+            { "to" : 50 },
+            { "from" : 50, "to" : 100 },
+            { "from" : 100, "to" : 150 },
+            { "from" : 150 }
+          ]
+        }
+      }
+    }
+}
+</pre>
