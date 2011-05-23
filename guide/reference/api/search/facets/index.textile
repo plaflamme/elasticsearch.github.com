@@ -115,6 +115,7 @@ h2. Formal Description
 h2. Examples
 
 A @terms@ facet (named "Manufacturer") and a @range@ facet (named "Price") applied on the query result
+
 <pre class="prettyprint lang-js">
 "facets" : {
   "Manufacturer" : {
@@ -137,6 +138,7 @@ A @terms@ facet (named "Manufacturer") and a @range@ facet (named "Price") appli
 </pre>
 
 A facet applied on all documents instead of on the query result only:
+
 <pre class="prettyprint lang-js">
 {
   "query" : {
@@ -156,6 +158,7 @@ A facet applied on all documents instead of on the query result only:
 </pre>
 
 A facet applied on documents that match the filter
+
 <pre class="prettyprint lang-js">
 {
   "query" : {
